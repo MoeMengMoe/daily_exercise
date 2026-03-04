@@ -1,0 +1,10 @@
+CompileFlags:
+  Add:
+    - "-xc++"
+    - "-std=c++17"
+---
+# 如果有特定的 C 文件需要按 C 处理，可以再单独定义
+If:
+  PathMatch: .*\.c
+CompileFlags:
+  Add: [-xc]
