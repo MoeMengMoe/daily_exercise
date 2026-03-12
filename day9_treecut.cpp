@@ -1,11 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
-int n,m;
+long long n,m;
 int ans;
-long long tree[100000];
+long long tree[10000000];
 int maxm;
 bool p(int mid){
-    long sum=0;
+    long long sum=0;
     for(int i=0;i<n;i++){
         if(mid<tree[i]){
             sum+=tree[i]-mid;
@@ -15,7 +15,7 @@ bool p(int mid){
     return false;
 }
 int find(){
-    int l=0,r=n;
+    int l=0,r=maxm;
     while(l<=r){
         int mid=l+(r-l)/2;
         if(p(mid)){
