@@ -14,17 +14,17 @@ int main(){
     {
         double l=i,r=i+1;
         
-        if(fabs(res(l))<delta)printf("%.2lld",l);
+        if(fabs(res(l))<delta)printf("%.2lf ",l);
         else if(fabs(res(r))<delta)continue;
         else if(res(l)*res(r)<0){
             while(r-l>delta){
                 double mid=(l+r)/2.0;
-                if(res(l)*res(mid)<0){
+                if(res(r)*res(mid)>0){
                     r=mid;
                 }
                 else l=mid;
             }
-            printf("%.2llf",l);
+            printf("%.2lf ",l);//注意格式化输出
         }
         
     }
